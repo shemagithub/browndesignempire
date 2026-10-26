@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-ink antialiased; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  img { @apply block max-w-full; }
+  :focus-visible { outline: 1px solid #161616; outline-offset: 3px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .runway-figure { transition: none !important; }
+}
